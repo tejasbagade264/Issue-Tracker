@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<div class="Container">
+
+    <div class="heading">
+
+    <div id="Pj">  <h1>Projects</h1> </div>
+     
+        <div id="createbutton">
+            <% if(locals.user){ %>
+                <a href="/new_project">
+                    <button id="createb">Create New Project  <i class="fa-solid fa-plus" style="color: #ffffff;"></i></button>
+                </a>
+             <%} %>
+            </div>
+    </div>
+
+    
+
+    <div class="project-list">
+        <% projects.forEach((project, index) => { %>
+            <div class="project-card" data-project-id="<%= project.id %>">
+                <span class="project-name"><%= project.name %></span>
+                <p class="created-date">Created: <%= project.createdAt.toISOString().split('T')[0] %></p>
+                <p class="creator">Created by: <%= project.user.name %></p>
+                <button class="delete-button">
+                    <% if (locals.user && locals.user._id.toString() === project.user.id.toString()) { %>
+                       
+                        
+                        <a href="/project/delete/<%= project.id %>"><i class="fa-solid fa-trash" style="color: #ff0000;"></i></a>
+                    <% } else { %>
+    
+                        <i class="fa-solid fa-trash" style="color: #c1cde2;"></i>
+    
+                    <%   } %>
+                </button>
+            </div>
+        <% }); %>
+    </div>
+
+    </div>
+    
+</body>
+
+
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const projectCards = document.querySelectorAll(".project-card");
+    
+            projectCards.forEach((card) => {
+                card.addEventListener("click", function () {
+                    const projectId = card.getAttribute("data-project-id");
+
+                    window.location.href = `/project/details/${projectId}`;
+                });
+            });
+        });
+    </script>
+   
+    
+       
+
+       
+ 
+

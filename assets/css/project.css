@@ -1,0 +1,82 @@
+
+   /* Reset default margin and padding */
+
+
+/* Style for the square boxes */
+.box-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.box {
+  width: 250px;
+  height: 150px;
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.total-issues {
+  background-color: #3498db;
+  color: white;
+}
+
+.resolved-issues {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.pending-issues {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Style for the issue table */
+.issue-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  height:35vh;
+  overflow: scroll;
+}
+.issue-table::-webkit-scrollbar{
+  width:0px;
+}
+
+.issue-table th,
+.issue-table td {
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.issue-table th {
+  background-color: #f0f0f0;
+}
+
+.status-closed {
+  color: #2ecc71;
+}
+
+/* Style for the create issue button */
+.create-issue-button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #069d2c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 78rem;
+  margin-top: -2rem;
+  
+  font-size: 1.1rem;
+
+}
+
+
+.create-issue-button:hover {
+  background-color: #2980b9;
+}

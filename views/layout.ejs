@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>
+
+    </title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    
+</head>
+
+<body>
+    <%- include('_header'); -%>
+
+    <%- body %>
+
+    <%- include('_footer'); -%>
+
+    
+
+    <script>
+        // Access flash.success and flash.error directly
+        var flashSuccess = '<%= flash.success %>';
+        var flashError = '<%= flash.error %>';
+
+        // Check if flashSuccess or flashError has content
+        if (flashSuccess && flashSuccess.length > 0) {
+            new Noty({
+                theme: 'metroui',
+                text: flashSuccess,
+                type: 'success',
+                layout: 'bottomRight',
+                timeout: 1500
+            }).show();
+        }
+
+        if (flashError && flashError.length > 0) {
+            new Noty({
+                theme: 'metroui',
+                text: flashError,
+                type: 'error',
+                layout: 'bottomRight',
+                timeout: 1500
+            }).show();
+        }
+    </script>
+
+</body>
+</html>

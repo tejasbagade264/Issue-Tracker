@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bugPage.css">
+    <title>Bug Report Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Bug Report Form</h1>
+        <form action="/project/createBug/<%= projectId %>" method="POST">
+            <div class="form-group">
+                <label for="bug">Bug Type:</label>
+                <select id="bug-type" name="bug">
+                    <option value="feature">Feature Request</option>
+                    <option value="bug">Bug</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Bug Description:</label>
+                <textarea id="bug-description" name="description" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="asignee">Assignee:</label>
+                <input type="text" id="assignee" name="asignee" required>
+            </div>
+
+            <div class="form-group">
+                <label for="due-date">Due Date:</label>
+                <input type="date" id="due-date" name="due-date" required>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

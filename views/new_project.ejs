@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Form</title>
+    <link rel="stylesheet" href="/css/create_project_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="Container">
+        <div class="box">
+            <div><h1>Create</h1></div>
+            <form action="project/create" method="post">
+                <label for="name">* Project Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+        
+                
+        
+        
+                <label for="asignee">Author:</label><br>
+                <input type="text" id="author" name="asignee"><br><br>
+        
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

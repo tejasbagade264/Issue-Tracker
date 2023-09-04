@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="/css/header.css">
+<header>
+    <div class="logo">
+        <img src="/images/logo.webp" alt="logo">
+        <span><h1>Issue Tracker</h1></span>
+        
+</div>
+
+<nav>
+        <% if(locals.user){  %>
+       <div><h3><a href="/">Home</a></h3></div> 
+        <div><h3><a href="/users/profile">Profile</a></h3></div>
+        
+      
+        <% } %>
+       
+</nav>
+
+    <div class="login-links">
+    <ul>
+        <% if(locals.user){  %>
+           <li><a href="/users/profile"><%= user.name %></a></li> 
+           <li >
+            <a href="/users/sign-Out">Sign Out</a>
+           </li>
+
+        <% }else{ %>
+             
+            <li id="controls">
+                <a href="/users/sign-In">Sign In</a>
+            </li>
+             <li id="controls">
+                <a href="/users/sign-Up">Sign Up</a>
+            </li>
+        
+        <% } %>
+    </ul>
+</div>
+</header>

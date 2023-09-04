@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    flex-direction: column;
+}
+#logout a{
+    color:red;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
+.projects{
+    margin-top: 2rem;
+    height: 50px;
+}
+#gotoproject{
+    font-size: 1.3rem;
+    height:50px;
+    width: 200px;
+    border-radius: 20px;
+    background-color:#1e71de;
+    color: white;
+    font-family: system-ui;
+    border: none;
+    box-shadow: 0px 0px 12px 1px black;
+}
+.projects a{
+    text-decoration: none;
+}

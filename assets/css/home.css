@@ -1,0 +1,84 @@
+
+   .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    height: 70vh;
+    overflow: scroll;
+   
+}
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.project-card {
+    border: 2px solid hsl(214, 58%, 84%);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.project-card:hover{
+    transform: scale(1.03);
+    transition: 0.5s ease-in-out;
+    background-color: hsl(214, 80%, 57%);
+}
+
+.project-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.created-date {
+    font-size: 14px;
+    color: #555;
+}
+
+.creator {
+    font-size: 14px;
+    color: #555;
+}
+
+.delete-button {
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 46rem;
+}
+
+.delete-button:hover {
+   transform: scale(1.5);
+   transition: 1s ease-in-out;
+}
+
+#createb{
+    background-color: green;
+    color: white;
+    font-size: 1.1rem;
+    width:12rem;
+}
+.heading{
+    display:flex ;
+    gap:28rem;
+    position: fixed;
+}
+#createbutton{
+    margin-top: 2rem;
+}
+.heading {
+    position: fixed;
+    height: 3rem;
+    width: 800px;
+    padding: 1rem;
+    margin-top: -1.3rem;
+    margin-left: -20px;
+    background-color: white;
+}
+.project-list{
+    margin-top: 80px;
+}

@@ -1,0 +1,76 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+.login-box{
+    height:250px;
+    width:400px;
+   
+}
+
+button{
+    background-color: rgb(245, 32, 32);
+    margin-top: 50px;
+    color:white;
+    height: 40px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 1.3rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+
+}
+.username{
+    height:50px;
+    width:400px;
+   
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+   font-size: 1.5rem;  
+   background-color: #f0f0f0;
+   gap:20px;
+}
+.password{
+    height:50px;
+    width:400px;
+   
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem; 
+    background-color: #f0f0f0; 
+    gap:20px;
+}
+input{
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    width:380px;
+}
+input:focus {
+    outline: none; /* Remove the default focus outline */
+    border: none; /* Remove the border */
+    /* You can also add other styling here, such as background color or box shadow */
+}
+.username i{
+    margin-left: 20px;
+}
+.password i{
+    margin-left: 20px;
+}
+.flash-messages{
+    width: 100vw;
+    color: white;
+    background-color: #f70606;
+    
+    margin-left: -570px;
+}

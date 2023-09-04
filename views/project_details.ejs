@@ -1,0 +1,69 @@
+
+
+
+<link rel="stylesheet" href="/css/project.css">
+
+
+<body>
+    <div class="box-container">
+        <div class="box total-issues">
+            <h2>Total Issues</h2>
+            <p>50</p>
+        </div>
+        <div class="box resolved-issues">
+            <h2>Resolved Issues</h2>
+            <p>30</p>
+        </div>
+        <div class="box pending-issues">
+            <h2>Pending Issues</h2>
+            <p>20</p>
+        </div>
+    </div>
+
+    <h2>Issue Details</h2>
+
+    <a href="/project/bugPage/<%= project._id %>"><button class="create-issue-button">Create Issue/Bug</button> </a>
+    <table class="issue-table">
+        <thead>
+            <tr>
+                <th>Assignee Name</th>
+                <th>Issue Type</th>
+                <th>Description</th>
+                <th>Created Date</th>
+                <th>Due Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (const bug of bugs) { %>
+                <tr>
+                    <td><%= bug.user.name %></td>
+                    <td><%= bug.bug %></td>
+                    <td><%= bug.description %></td>
+                    <td><%= bug.createdAt.toISOString().split('T')[0] %></td>
+                    <td><%= bug.createdAt.toISOString().split('T')[0] %></td>
+                    <td class="<%= bug.status === 'Closed' ? 'status-closed' : '' %>"><%= bug.status %></td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+    
+
+    
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
