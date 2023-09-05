@@ -15,6 +15,10 @@ const bugSchema = new mongoose.Schema({
         type: String,
         required: true
      },
+     status: {
+        type: String,
+        default: 'open' // Set the default value to 'open'
+    },
     user:{
         type : mongoose.Schema.Types.ObjectId,
         ref : 'User'

@@ -77,11 +77,11 @@ module.exports.projectdetails = async function(req, res) {
             // Handle the case where the project is not found
             return res.status(404).send('Project not found');
         }
-
+       
         const bugs = await Bug.find({ project: req.params.projectId }).populate('user');
-
-        // Render the project details page with the project and bugs data
-        res.render('project_details', { project: project, bugs: bugs });
+        const bugCountTotal = await Bug.countDocuments({ project: req.params.projectId }); // Calculate the count of bugs
+        const BugCountOpen = await Bug.countDocuments({ project: req.params.projectId, status: 'Open' });        // Render the project details page with the project and bugs data
+        res.render('project_details', { project: project, bugs: bugs ,bugCountTotal: bugCountTotal,BugCountOpen: BugCountOpen });
         
     } catch (error) {
         console.error(error);

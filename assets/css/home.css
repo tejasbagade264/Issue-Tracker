@@ -73,7 +73,7 @@
 .heading {
     position: fixed;
     height: 3rem;
-    width: 800px;
+    width: 808px;
     padding: 1rem;
     margin-top: -1.3rem;
     margin-left: -20px;
@@ -81,4 +81,8 @@
 }
 .project-list{
     margin-top: 80px;
+}
+.viewdetails{
+    text-decoration: none;
+    color:rgb(246, 13, 13);
 }
