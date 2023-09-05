@@ -39,7 +39,7 @@ app.use(session({
   },
   store: MongoStore.create({
       //session to intract with mongoose
-      mongoUrl:'mongodb://127.0.0.1:27017/User_Authentication',
+      mongoUrl:'mongodb+srv://tejasbagade1512:tejas123@devdatabase.u2cpw0f.mongodb.net/Issue-Tracker?retryWrites=true&w=majority',
       // mongooseConnection:db,
       //do i want to remove automatically is disabled
       autoRemove:'disabled'
