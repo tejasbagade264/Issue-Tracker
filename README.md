@@ -6,6 +6,15 @@ The Issue Tracker Project is a web application that allows users to manage and t
 https://issue-tracker-hhbu.onrender.com/
 
 
+# View
+![iss1](https://github.com/tejasbagade264/Issue-Tracker/assets/139443949/b096016e-9cdd-4048-baec-54dc8626bbea)
+![iss2](https://github.com/tejasbagade264/Issue-Tracker/assets/139443949/47e906aa-10f1-492d-9402-496f0e033f9e)
+![iss4](https://github.com/tejasbagade264/Issue-Tracker/assets/139443949/fa9b1301-e9d9-42a0-ab3b-1c6937785840)
+![iss5](https://github.com/tejasbagade264/Issue-Tracker/assets/139443949/8b86b72b-b13a-454a-b1f6-126dd7740808)
+![iss6](https://github.com/tejasbagade264/Issue-Tracker/assets/139443949/8c0a14d7-d48d-4f6c-81e0-82c2729416a0)
+
+
+
 # Features
 Create new projects.
 Add issues to existing projects.
